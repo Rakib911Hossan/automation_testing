@@ -1,0 +1,22 @@
+{
+  "name": "automation_testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rakib911Hossan/automation_testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rakib911Hossan/automation_testing/issues"
+  },
+  "homepage": "https://github.com/Rakib911Hossan/automation_testing#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.18"
+  }
+}
