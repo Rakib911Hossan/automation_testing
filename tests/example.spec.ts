@@ -1,18 +1,18 @@
 import { test, expect } from '@playwright/test';
+import { LoginPage } from '../pages/login.page';
+import  testdata  from "../fixtures/testdata.json";
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+test('login with valid data', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  await loginPage.navigate(); // Replace with your actual login URL
+  await loginPage.login(testdata.validuser.username, testdata.validuser.password); // Replace with actual credentials
+  await page.pause(); // Pause to inspect the page before login
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+test('login with inValid data', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  await loginPage.navigate(); // Replace with your actual login URL
+  await loginPage.login(testdata.invaliduser.username, testdata.invaliduser.password); // Replace with actual credentials
+  await page.pause(); // Pause to inspect the page before login
 });
