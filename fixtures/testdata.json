@@ -1,7 +1,7 @@
 {
     "validuser":{
         "baseurl": "http://192.168.1.125:31767/",
-        "username": "allpermission@gmial.com",
+        "username": "allpermission@gmail.com",
         "password": "123456"
     },
     "invaliduser":{

@@ -12,7 +12,7 @@ export class LoginPage extends BasePage {
         this.loginButton = page.getByRole('button', { name: 'Sign in' });
     }
 
-async navigate() {
+    async navigate() {
         await this.page.goto(testdata.validuser.baseurl); // Replace with your actual login URL
         
     }

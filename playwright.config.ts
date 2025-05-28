@@ -35,11 +35,21 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      name: 'setup',
+      testMatch: '**/setup/*.setup.ts',
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1280, height: 720 },
+      }
+    },
+    {
       name: 'chromium',
       use: {
          ...devices['Desktop Chrome'] ,
       viewport: { width: 1280, height: 720 },
+      storageState: 'fixtures/auth/userAuthState.json',
     },
+    dependencies: ['setup']
   },
     // {
     //   name: 'firefox',
