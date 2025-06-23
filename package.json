@@ -17,6 +17,7 @@
   "homepage": "https://github.com/Rakib911Hossan/automation_testing#readme",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
+    "@playwright/mcp": "^0.0.25",
     "@types/node": "^22.15.18"
   }
 }
