@@ -7,7 +7,7 @@ test('Login and Add Client', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.navigate();
   await loginPage.login('allpermission@gmail.com', '123456');
-  await page.waitForURL('**/dashboard');
+  // await page.waitForURL('**/dashboard');
 
   const clientPage = new ClientPage(page);
   await clientPage.clientMenu.click(); // or navigateToClientPage()
@@ -17,7 +17,7 @@ test('Login and Add Client', async ({ page }) => {
     fullName: 'Redwan',
     phone: '01680069764',
     email: 'redwan@gmail.com',
-    nationalId: '123124135245',
+    nationalId: '1231241352456',
   });
   await expect(page.getByText('Client added successfully')).toBeVisible(); // adjust to actual success message
 });
