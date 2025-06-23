@@ -7,8 +7,9 @@ test('login with valid data', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.navigate(); // Replace with your actual login URL
   await loginPage.login(testdata.validuser.username, testdata.validuser.password); // Replace with actual credentials
-  await page.pause(); // Pause to inspect the page before login
-// await page.goto('http://192.168.1.125:31767/zone/');
+  // Pause to inspect the page before login
+await page.goto('http://192.168.1.125:31767/zone/');
+await page.pause(); 
 await page.context().storageState({
   path: 'fixtures/auth/userAuthState.json'
 });
