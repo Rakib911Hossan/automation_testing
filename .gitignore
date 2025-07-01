@@ -6,3 +6,4 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 fixtures/auth/userAuthState.json
+.env
